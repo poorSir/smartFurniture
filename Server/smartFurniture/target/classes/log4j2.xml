@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT" ignoreExceptions="false">
+            <PatternLayout
+                    pattern="%d{HH:mm:ss.SSS} [%t] %M %-5level %logger{36} - %msg%n"/>
+        </Console>
+        <RollingFile name="RollingFile" fileName="logs/app.log"
+                     filePattern="logs/app-%d{MM-dd-yyyy}.log.gz" ignoreExceptions="false">
+            <PatternLayout>
+                <Pattern>%d %p %c [%t] %m%n</Pattern>
+            </PatternLayout>
+            <TimeBasedTriggeringPolicy/>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Logger name="com.zucc.smartFurniture.mapper" level="debug" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="RollingFile"/>
+        </Logger>
+        <logger name="org.springframework" level="INFO"></logger>
+        <logger name="org.mybatis" level="INFO"></logger>
+        <root level="all">
+            <appender-ref ref="Console"/>
+            <appender-ref ref="RollingFileInfo"/>
+            <appender-ref ref="RollingFileWarn"/>
+            <appender-ref ref="RollingFileError"/>
+        </root>
+    </Loggers>
+</Configuration>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewCtrl"
+            type="com.zucc.smartfurniture.module.mine.viewCtrl.UpdataDeviceCtrl"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/background">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:fitsSystemWindows="true"
+            android:minHeight="?attr/actionBarSize"
+            app:navigationIcon="@drawable/icon_back">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/mine_updata_device"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_h1" />
+        </android.support.v7.widget.Toolbar>
+        <LinearLayout
+            style="@style/edit_left_right"
+            android:layout_marginTop="@dimen/y40"
+            android:background="@drawable/layout_underline">
+
+            <com.zucc.smartfurniture.views.iconfont.IconFontsText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x20"
+                android:gravity="center_vertical"
+                android:text="@string/iconfont_device"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/iconfont_size" />
+
+            <com.zucc.smartfurniture.views.ClearEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x10"
+                android:background="@null"
+                android:hint="@string/mine_device_password_old"
+                android:inputType="text"
+                android:maxLength="11"
+                android:text="@={viewCtrl.vm.oldDevicePassword}"
+                android:paddingLeft="@dimen/x10"
+                android:textSize="@dimen/text_size_h1"
+                app:delete_image="@drawable/icon_clear" />
+        </LinearLayout>
+        <LinearLayout
+            style="@style/edit_left_right"
+            android:layout_marginTop="@dimen/y10"
+            android:background="@drawable/layout_underline">
+
+            <com.zucc.smartfurniture.views.iconfont.IconFontsText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x20"
+                android:gravity="center_vertical"
+                android:text="@string/iconfont_password"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/iconfont_size" />
+
+            <com.zucc.smartfurniture.views.ClearEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x10"
+                android:background="@null"
+                android:hint="@string/mine_device_password_new"
+                android:inputType="text"
+                android:maxLength="11"
+                android:text="@={viewCtrl.vm.newDevicePassword}"
+                android:paddingLeft="@dimen/x10"
+                android:textSize="@dimen/text_size_h1"
+                app:delete_image="@drawable/icon_clear" />
+        </LinearLayout>
+        <LinearLayout
+            style="@style/edit_left_right"
+            android:layout_marginTop="@dimen/y10"
+            android:background="@drawable/layout_underline">
+
+            <com.zucc.smartfurniture.views.iconfont.IconFontsText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x20"
+                android:gravity="center_vertical"
+                android:text="@string/iconfont_scene"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/iconfont_size" />
+
+            <com.zucc.smartfurniture.views.ClearEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x10"
+                android:background="@null"
+                android:hint="@string/use_scene"
+                android:inputType="text"
+                android:maxLength="10"
+                android:paddingLeft="@dimen/x10"
+                android:text="@={viewCtrl.vm.useScene}"
+                android:textSize="@dimen/text_size_h1"
+                app:delete_image="@drawable/icon_clear" />
+        </LinearLayout>
+        <LinearLayout
+            style="@style/edit_left_right"
+            android:layout_marginTop="@dimen/y10"
+            android:background="@drawable/layout_underline">
+
+            <com.zucc.smartfurniture.views.iconfont.IconFontsText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x20"
+                android:gravity="center_vertical"
+                android:text="@string/iconfont_detail"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/iconfont_size" />
+
+            <com.zucc.smartfurniture.views.ClearEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x10"
+                android:background="@null"
+                android:hint="@string/detail"
+                android:inputType="text"
+                android:maxLength="10"
+                android:paddingLeft="@dimen/x10"
+                android:text="@={viewCtrl.vm.detail}"
+                android:textSize="@dimen/text_size_h1"
+                app:delete_image="@drawable/icon_clear" />
+        </LinearLayout>
+        <com.zucc.smartfurniture.views.NoDoubleClickButton
+            android:id="@+id/button"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x40"
+            android:layout_marginRight="@dimen/x40"
+            android:layout_marginTop="@dimen/y30"
+            android:background="@drawable/selector_button"
+            android:onClick="@{(view)->viewCtrl.updataDeviceClick(view)}"
+            android:text="@string/mine_updata_device"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</layout>

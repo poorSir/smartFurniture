@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="viewCtrl"
+            type="com.zucc.smartfurniture.module.home.viewCtrl.HomeCtrl" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_light">
+
+            <com.youth.banner.Banner
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y150"
+                android:background="@color/background_high" />
+
+            <LinearLayout
+                android:id="@+id/center"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y70"
+                android:layout_marginLeft="@dimen/y45"
+                android:layout_marginRight="@dimen/y45"
+                android:layout_marginTop="@dimen/y110"
+                android:background="@drawable/circle_angle"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="@{(view)->viewCtrl.control()}"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:paddingTop="@dimen/y6"
+                        android:src="@drawable/remote_control" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y20"
+                        android:gravity="center"
+                        android:text="@string/remote_control" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/y10"
+                    android:layout_marginTop="@dimen/y10"
+                    android:background="@color/gray" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="@{(view)->viewCtrl.record()}"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:paddingTop="@dimen/y6"
+                        android:src="@drawable/operate_record" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y20"
+                        android:gravity="center"
+                        android:text="@string/operate_record" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/myscene"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/left_line"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/x10"
+                        android:text="@string/myscene" />
+
+                    <com.zucc.smartfurniture.views.iconfont.IconFontsText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/x5"
+                        android:text="@string/iconfont_forword"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/text_size_h1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:onClick="@{(view)->viewCtrl.execute1()}">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:padding="@dimen/x13"
+                            android:src="@drawable/gome_home" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/y20"
+                            android:gravity="center_horizontal"
+                            android:paddingBottom="@dimen/y5"
+                            android:text="@string/gome_home" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:onClick="@{(view)->viewCtrl.execute2()}">
+
+                        <com.zucc.smartfurniture.views.iconfont.IconFontsText
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/iconfont_leavehome"
+                            android:textColor="@color/green_light"
+                            android:textSize="50sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/y20"
+                            android:gravity="center"
+                            android:paddingBottom="@dimen/y5"
+                            android:text="@string/leave_home" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:onClick="@{(view)->viewCtrl.execute3()}">
+
+                        <com.zucc.smartfurniture.views.iconfont.IconFontsText
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/iconfont_meet"
+                            android:textColor="@color/pink"
+                            android:textSize="50sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/y20"
+                            android:gravity="center"
+                            android:paddingBottom="@dimen/y5"
+                            android:text="@string/meet_visitor" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:onClick="@{(view)->viewCtrl.execute4()}">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:padding="@dimen/x15"
+                            android:src="@drawable/sleep" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/y20"
+                            android:gravity="center"
+                            android:paddingBottom="@dimen/y5"
+                            android:text="@string/sleep" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/myscene"
+                android:layout_marginTop="@dimen/y20"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingTop="@dimen/y10">
+
+                <ImageView
+                    android:layout_width="@dimen/x100"
+                    android:layout_height="@dimen/x100"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/circle"
+                    android:padding="@dimen/y15"
+                    android:src="@drawable/voice"
+                    android:onClick="@{(view)->viewCtrl.start(view)}"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</layout>

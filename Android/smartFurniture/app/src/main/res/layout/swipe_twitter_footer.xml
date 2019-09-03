@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.zucc.smartfurniture.views.RefreshFooterView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y40"
+        android:background="@color/hint_grey">
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            style="?android:attr/progressBarStyleSmallInverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x8"
+            android:layout_toLeftOf="@+id/tvLoadMore" />
+
+        <ImageView
+            android:id="@+id/ivSuccess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x8"
+            android:layout_toLeftOf="@+id/tvLoadMore"
+            android:background="@drawable/icon_refresh_success" />
+
+        <TextView
+            android:id="@+id/tvLoadMore"
+            android:layout_width="@dimen/x150"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/black_light" />
+    </RelativeLayout>
+</com.zucc.smartfurniture.views.RefreshFooterView>

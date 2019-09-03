@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zucc.smartFurniture.mapper.DeviceSceneMapper">
+    <select id="queryByUserId" parameterType="Integer" resultType="DeviceScene">
+        SELECT * FROM device_scene WHERE user_id =#{userId}
+    </select>
+    <insert id="add" parameterType="DeviceScene" keyProperty="id">
+        INSERT INTO device_scene(user_id, device_id, classify, detail) VALUES (#{user_id},#{device_id},#{classify},#{detail})
+    </insert>
+    <delete id="delete">
+      DELETE FROM device_scene WHERE user_id = #{user_id} AND device_id = #{device_id}
+    </delete>
+    <select id="queryDAU" resultType="DeviceScene">
+        SELECT * FROM device_scene WHERE user_id = #{user_id} AND device_id = #{device_id}
+    </select>
+    <update id="updataDeviceSceneName">
+        UPDATE device_scene SET classify = #{classify},detail = #{detail} WHERE user_id = #{userId} AND device_id = #{deviceId}
+    </update>
+</mapper>

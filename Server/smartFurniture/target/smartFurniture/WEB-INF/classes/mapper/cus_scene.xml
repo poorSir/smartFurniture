@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zucc.smartFurniture.mapper.CusSceneMapper">
+    <select id="queryByUAD" resultType="CusScene">
+        SELECT * FROM cus_scene WHERE user_id = #{userId} AND cus_id = #{cusId}
+    </select>
+    <insert id="addCusDevice" parameterType="CusScene">
+        INSERT INTO cus_scene(cus_id,user_id,device_id,operation) VALUES (#{cus_id},#{user_id},#{device_id},#{operation})
+    </insert>
+    <select id="queryByUCD" resultType="CusScene">
+        SELECT * FROM cus_scene WHERE cus_id = #{cusId} AND user_id = #{userId} AND device_id = #{deviceId}
+    </select>
+    <update id="updataCusScene">
+        UPDATE cus_scene SET operation = #{operation} WHERE user_id = #{userId} AND device_id = #{deviceId} AND cus_id = #{cusId}
+    </update>
+</mapper>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="me.tatarka.bindingcollectionadapter2.LayoutManagers" />
+        <variable
+            name="viewCtrl"
+            type="com.zucc.smartfurniture.module.mine.viewCtrl.CustomizationDeviceCtrl"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:fitsSystemWindows="true"
+            android:minHeight="?attr/actionBarSize"
+            app:navigationIcon="@drawable/icon_back">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/mine_customization_operation"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_h1" />
+            <com.zucc.smartfurniture.views.iconfont.IconFontsText
+                android:id="@+id/plus"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/x10"
+                android:gravity="center_vertical"
+                android:text="@string/iconfont_plus"
+                android:textColor="@color/white"
+                android:textSize="@dimen/iconfont_size" />
+        </android.support.v7.widget.Toolbar>
+        <com.aspsine.swipetoloadlayout.SwipeToLoadLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:listener="@{viewCtrl.listener}">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/swipe_target"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:addItemDecoration="@{viewCtrl.viewModel.type}"
+                app:itemBinding="@{viewCtrl.viewModel.onItemBind}"
+                app:items="@{viewCtrl.viewModel.items}"
+                app:layoutManager="@{LayoutManagers.linear()}" />
+        </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+    </LinearLayout>
+</layout>

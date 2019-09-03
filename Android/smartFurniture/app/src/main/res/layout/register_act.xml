@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewCtrl"
+            type="com.zucc.smartfurniture.module.user.viewCtrl.RegisterCtrl"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:fitsSystemWindows="true"
+            android:minHeight="?attr/actionBarSize"
+            app:navigationIcon="@drawable/icon_back">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/register"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_h1" />
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/edit_left_right"
+                    android:layout_marginTop="@dimen/y40"
+                    android:background="@drawable/layout_underline">
+
+                    <com.zucc.smartfurniture.views.iconfont.IconFontsText
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:gravity="center_vertical"
+                        android:text="@string/iconfont_username"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/iconfont_size" />
+
+                    <com.zucc.smartfurniture.views.ClearEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/x10"
+                        android:background="@null"
+                        android:hint="@string/username_hint"
+                        android:inputType="phone"
+                        android:maxLength="11"
+                        android:paddingLeft="@dimen/x10"
+                        android:text="@={viewCtrl.vm.username}"
+                        android:textSize="@dimen/text_size_h1"
+                        app:delete_image="@drawable/icon_clear" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/edit_left_right"
+                    android:layout_marginTop="@dimen/y10"
+                    android:background="@drawable/layout_underline">
+
+                    <com.zucc.smartfurniture.views.iconfont.IconFontsText
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:gravity="center_vertical"
+                        android:text="@string/iconfont_password"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/iconfont_size" />
+
+                    <com.zucc.smartfurniture.views.ClearEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/x10"
+                        android:background="@null"
+                        android:hint="@string/password_hint"
+                        android:inputType="textPassword"
+                        android:maxLength="12"
+                        android:paddingLeft="@dimen/x10"
+                        android:text="@={viewCtrl.vm.password}"
+                        android:textSize="@dimen/text_size_h1"
+                        app:delete_image="@drawable/icon_clear" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/edit_left_right"
+                    android:layout_marginTop="@dimen/y10"
+                    android:background="@drawable/layout_underline">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/x10"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <com.zucc.smartfurniture.views.iconfont.IconFontsText
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/x20"
+                            android:gravity="center_vertical"
+                            android:text="@string/iconfont_identitfy_code"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/iconfont_size" />
+
+                        <com.zucc.smartfurniture.views.ClearEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/x10"
+                            android:background="@null"
+                            android:hint="@string/identitfy_code"
+                            android:inputType="number"
+                            android:text="@={viewCtrl.vm.identitfy_code}"
+                            android:maxLength="4"
+                            android:paddingLeft="@dimen/x10"
+                            android:textSize="@dimen/text_size_h1"
+                            app:delete_image="@drawable/icon_clear" />
+                    </LinearLayout>
+
+                    <com.zucc.smartfurniture.views.NoDoubleClickButton
+                        android:id="@+id/identitfy_code_get"
+                        android:layout_width="@dimen/x120"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/buttton_corner"
+                        android:gravity="center"
+                        android:text="@string/get_identitfy_code"
+                        android:onClick="@{(view)->viewCtrl.getCode()}"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+                <com.zucc.smartfurniture.views.NoDoubleClickButton
+                    android:id="@+id/button"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x40"
+                    android:layout_marginRight="@dimen/x40"
+                    android:layout_marginTop="@dimen/y30"
+                    android:background="@drawable/selector_button"
+                    android:onClick="@{(view)->viewCtrl.register()}"
+                    android:text="@string/register_finsh"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

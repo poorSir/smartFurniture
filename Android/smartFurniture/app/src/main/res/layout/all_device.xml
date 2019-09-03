@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="item"
+            type="com.zucc.smartfurniture.module.mine.model.AllDeviceVM"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/y15"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{item.classify}"
+            android:textSize="@dimen/text_size_h1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_h2"
+            android:paddingLeft="@dimen/x5"
+            android:text="@{item.detail}"/>
+        <com.zucc.smartfurniture.views.iconfont.IconFontsText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textSize="@dimen/text_size_h1"
+            android:textColor="@color/gray"
+            android:text="@{item.isOpen?@string/iconfont_up:@string/iconfont_down}"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,167 @@
+
+<resources>
+    <string name="app_name">智能家居</string>
+    <string name="cancel">取消</string>
+    <string name="home">首页</string>
+    <string name="control">遥控</string>
+    <string name="record">记录</string>
+    <string name="mine">我的</string>
+    <!--登录-->
+    <string name="username_hint">请输入手机号</string>
+    <string name="password_hint">请输入6-12位密码</string>
+    <string name="confirm_hint">确认密码</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="register_finsh">完成注册</string>
+    <string name="forget_password">忘记密码？</string>
+    <string name="forget_password2">忘记密码</string>
+    <string name="comfirm">确定</string>
+    <string name="submit">提交</string>
+    <string name="identitfy_code">验证码</string>
+    <string name="get_identitfy_code">获取验证码</string>
+    <string name="identitfy_code_send">验证码已经发出</string>
+    <string name="change_passoword">修改密码</string>
+    <!--首页-->
+    <string name="remote_control">远程控制</string>
+    <string name="operate_record">操作记录</string>
+    <string name="myscene">我的场景</string>
+    <string name="gome_home">回家</string>
+    <string name="leave_home">离家</string>
+    <string name="meet_visitor">会客</string>
+    <string name="sleep">晚安</string>
+    <!--远程控制-->
+    <dimen name="refresh_header_height_twitter">40dp</dimen>
+    <dimen name="load_more_footer_height_twitter">40dp</dimen>
+    <string name="load_more_reflesh">释放开始加载更多</string>
+    <string name="load_more_up">上拉加载更多</string>
+    <string name="load_more_ing">正在加载</string>
+    <string name="refresh_ing">正在加载</string>
+    <string name="refresh_start">释放开始刷新</string>
+    <string name="refresh_down">下拉刷新</string>
+    <string name="refresh_finish">刷新完成</string>
+    <!--记录-->
+    <string name="records_type_0">手动</string>
+    <string name="records_type_1">远程</string>
+    <string name="records_state_0">关闭</string>
+    <string name="records_state_1">打开</string>
+    <!--创建设备场景-->
+    <string name="device_scene">设备场景</string>
+    <string name="device_code">设备码</string>
+    <string name="device_code_password">设备密码</string>
+    <string name="use_scene">使用场景</string>
+    <string name="detail">具体描述</string>
+    <string name="bind_device">绑定设备</string>
+    <!--我的-->
+    <string name="mine_login_out">退出登录</string>
+    <string name="mine_all_device">所有设备</string>
+    <string name="mine_scene_setting">我的场景</string>
+    <string name="mine_updata_device">修改设备</string>
+    <string name="mine_device_password_old">设备原密码</string>
+    <string name="mine_device_password_new">设备新密码</string>
+    <string name="mine_customization_operation">场景操作</string>
+    <string name="mine_customization_device_add">添加设备</string>
+    <string name="mine_dialog_cancel">取消</string>
+    <string name="mine_dialog_open">打开</string>
+    <string name="mine_dialog_close">关闭</string>
+    <string name="mine_dialog_title">设备操作</string>
+    <!--错误-->
+    <string name="error_unknow">未知错误</string>
+    <string name="error_socket_timeout">网络连接超时</string>
+    <string name="error_phone">请输入正确的手机号</string>
+    <string name="error_identitfy_code">请输入验证码</string>
+    <string name="error_two_same">两次密码输入不一致</string>
+    <string name="error_device_code">请输入设备码</string>
+    <string name="error_device_password">请输入设备密码</string>
+    <string name="error_complete">请输入完整信息</string>
+    <string name="error_oldpassword">请输入原密码</string>
+    <string name="error_newpassword">请输入新密码</string>
+    <string name="error_classify">请输入使用场景</string>
+    <string name="error_detail">请输入具体描述</string>
+    <string name="is_changestate">是否更改操作状态</string>
+    <string name="success">操作成功</string>
+    <string name="recognition_error">无法识别</string>
+
+
+    <string name="please_speak">请说话</string>
+    <string name="speaking">说话中</string>
+    <string name="start">开始</string>
+    <string name="setting">设置</string>
+
+
+    <string name="infile_default"></string>
+    <string-array name="infile_list">
+        <item>@string/infile_default</item>
+        <item>res:///com/baidu/android/voicedemo/16k_test.pcm, 16k采样的测试音频</item>
+        <item>#com.baidu.android.voicedemo.recognization.online.InFileStream.create16kStream(), 文件流</item>
+        <item>#com.baidu.android.voicedemo.recognization.online.MicrophoneInputStream.getInstance(), 自行从麦克风读取</item>
+    </string-array>
+
+    <string name="decoder_default"></string>
+    <string-array name="decoder_list">
+        <item>@string/decoder_default</item>
+        <item>0, 纯在线</item>
+        <item>2, 离线命令词及在线识别混合, 在线优先</item>
+    </string-array>
+
+    <string name="language_default"></string>
+    <string-array name="language">
+        <item>@string/language_default</item>
+        <item>cmn-Hans-CN, 普通话(默认)</item>
+        <item>en-GB, 英语(美国)</item>
+        <item>sichuan-Hans-CN, 四川话</item>
+        <item>yue-Hans-CN, 粤语</item>
+    </string-array>
+
+    <string name="nlu_default"></string>
+    <string-array name="nlu_list">
+        <item>@string/nlu_default</item>
+        <item>enable, 开启本地语义解析（不支持英语）</item>
+        <item>enable-all, 在enable参数基础上,临时解析结果也做本地语义分析</item>
+        <item>disable, 不适用语义解析</item>
+    </string-array>
+
+    <string name="vad_default"></string>
+    <string-array name="vad_list">
+        <item>@string/vad_default</item>
+        <item>dnn, 默认，推荐模型</item>
+        <item>touch,  关闭静音断句功能。用戶手动停止录音</item>
+    </string-array>
+    <string name="_model_default"></string>
+    <string-array name="_model_list">
+        <item>@string/vad_default</item>
+        <item>search, 搜索模型，默认， 适用于短句， 无逗号，可以有语义</item>
+        <item>input, 输入法模型，适用于长句及长语音，有逗号分割， 无语义</item>
+        <item>far, 远场模型，高级，适用于音源离麦克风较远(>1m)的录音，有逗号分割， 可以有语义</item>
+    </string-array>
+    <string name="vad_timeout_default"></string>
+    <string-array name="vad_timeout_list">
+        <item>@string/vad_timeout_default</item>
+        <item>0, 开启长语音（离线不支持）。建议输入法模型。</item>
+        <item>800, 毫秒，静音800ms后断句，适用于输入短语</item>
+        <item>2000, 毫秒，静音2000ms后断句，适用于输入长句</item>
+        <item>2230, 毫秒，请修改代码中的VAD_ENDPOINT_TIMEOUT，自定义时长（建议800ms-3000ms之间）</item>
+    </string-array>
+
+    <string name="prop_default"></string>
+    <string-array name="prop_list">
+        <item>@string/prop_default</item>
+        <item>10005, 热词（默认）</item>
+        <item>10060, 地图</item>
+        <item>10001, 音乐</item>
+        <item>10002, 视频</item>
+        <item>10003, 应用</item>
+        <item>10004, 网页</item>
+        <item>10006, 购物</item>
+        <item>10007, 健康</item>
+        <item>10008, 打电话</item>
+        <item>10008, 超级电话</item>
+        <item>10052, 医疗</item>
+        <item>10053, 汽车</item>
+        <item>10054, 娱乐餐饮</item>
+        <item>10055, 财经</item>
+        <item>10056, 游戏</item>
+        <item>10057, 菜谱</item>
+        <item>10058, 助手</item>
+        <item>20000, 输入</item>
+    </string-array>
+</resources>

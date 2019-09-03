@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zucc.smartFurniture.mapper.DeviceMapper">
+    <insert id="add" parameterType="Device" keyProperty="id">
+        INSERT INTO device(code,password,state) VALUES (#{code},#{password},#{state})
+    </insert>
+    <select id="queryByCAP" resultType="Device">
+        SELECT * FROM device WHERE code = #{code} AND password = #{password}
+    </select>
+    <update id="updataDeviceState">
+        UPDATE device  SET state = #{state} WHERE id = #{id}
+    </update>
+    <select id="queryById" parameterType="Integer" resultType="Device">
+        SELECT * FROM device WHERE id = #{id}
+    </select>
+    <update id="updataDevicePassword">
+        UPDATE device SET password = #{newPassword} WHERE id = #{id} AND password = #{oldPassword}
+    </update>
+    <select id="queryByCode" resultType="Device">
+        SELECT * FROM device WHERE code = #{code}
+    </select>
+</mapper>

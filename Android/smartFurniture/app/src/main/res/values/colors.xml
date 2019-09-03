@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimary_high">#293fb6</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffffff</color>
+    <color name="red">#ff0000</color>
+    <color name="gray">#959A9D</color>
+    <color name="hint_grey">#CCCCCC</color>
+    <color name="gray_light">#FFAFB4B7</color>
+    <color name="green_light">#81f0c3</color>
+    <color name="pink">#E45577</color>
+    <color name="green">#33da33</color>
+    <color name="black_light">#333333</color>
+    <!--首页按钮平常色-->
+    <color name="normal">#999999</color>
+    <color name="select">#3F51B5</color>
+    <color name="background">#E6F4FF</color>
+    <color name="background_high">#FFC8E5FC</color>
+    <!--透明色-->
+    <color name="transparent">#00000000</color>
+    <color name="lightgray">#f2f2f2</color>
+
+</resources>

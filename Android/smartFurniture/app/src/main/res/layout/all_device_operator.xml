@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="item"
+            type="com.zucc.smartfurniture.module.mine.model.AllDeviceOperatorVM"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/y10"
+        android:orientation="horizontal">
+       <com.zucc.smartfurniture.views.iconfont.IconFontsText
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:gravity="center"
+           android:layout_height="wrap_content"
+           android:text="@string/iconfont_delete"
+           android:textSize="@dimen/iconfont_size"
+           android:onClick="@{(view)->item.delete(view)}"/>
+        <com.zucc.smartfurniture.views.iconfont.IconFontsText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="@string/iconfont_editor"
+            android:onClick="@{(view)->item.edit(view)}"
+            android:textSize="@dimen/iconfont_size"/>
+    </LinearLayout>
+</layout>

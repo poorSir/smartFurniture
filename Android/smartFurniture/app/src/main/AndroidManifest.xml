@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.zucc.smartfurniture"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:name=".SimpleTransApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        tools:replace="android:icon"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <!--登录-->
+        <activity android:name=".module.user.ui.LoginAct"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--注册-->
+        <activity android:name=".module.user.ui.RegisterAct"
+            android:screenOrientation="portrait">
+        </activity>
+        <!--忘记密码-->
+        <activity android:name=".module.user.ui.ForgetPasswordAct"
+            android:screenOrientation="portrait">
+        </activity>
+        <!--修改密码-->
+        <activity android:name=".module.user.ui.ChangePasswordAct"
+            android:screenOrientation="portrait">
+        </activity>
+        <!--创建设备场景-->
+        <activity android:name=".module.control.ui.CreateDeviceSceneAct"
+            android:screenOrientation="portrait"/>
+        <!--所有设备-->
+        <activity android:name=".module.mine.ui.AllDeviceAct"
+            android:screenOrientation="portrait"/>
+        <!--修改设备-->
+        <activity android:name=".module.mine.ui.UpdataDeviceAct"
+            android:screenOrientation="portrait"/>
+        <!--我的场景 -->
+        <activity android:name=".module.mine.ui.CustomizationAct"
+            android:screenOrientation="portrait"/>
+        <!--场景设备-->
+        <activity android:name=".module.mine.ui.CustomizationDeviceAct"
+            android:screenOrientation="portrait"/>
+        <!--场景设备添加-->
+        <activity android:name=".module.mine.ui.CustomizationDeviceAddAct"
+            android:screenOrientation="portrait"/>
+        <!--mob短信验证-->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity android:name=".baiduvoice.BaiduASRDigitalDialog"
+            android:configChanges="orientation|keyboardHidden|screenLayout"
+            android:theme="@android:style/Theme.Dialog"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.baidu.action.RECOGNIZE_SPEECH" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <service android:name="com.baidu.speech.VoiceRecognitionService" android:exported="false" />
+        <meta-data android:name="com.baidu.speech.APP_ID"
+            android:value="10989428" />
+        <meta-data
+            android:name="com.baidu.speech.API_KEY"
+            android:value="m88WBUrdGuhGTe47q0BC4kb6" />
+        <meta-data
+            android:name="com.baidu.speech.SECRET_KEY"
+            android:value="Gkyc8bnCM2xboWUBBW3a1LHKBHd8B6Qa" />
+
+    </application>
+    <!--网络权限-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!--读取手机联系人-->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!--访问电话状态-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--允许程序写入外部存储，如SD卡上写文件-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--允许程序访问有关GSM网络信息-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--允许程序访问Wi-Fi网络状态信息-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--允许程序监控一个将收到短信息，记录或处理-->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <!--允许程序读取短信息-->
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <!--允许程序获取当前或最近运行的应用-->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!--通过GPS芯片接收卫星的定位信息，定位精度达10米以内-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+</manifest>

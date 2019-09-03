@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--用户名-->
+    <string name="iconfont_username">&#xe61b;</string>
+    <!--密码-->
+    <string name="iconfont_password">&#xe659;</string>
+    <!--验证码-->
+    <string name="iconfont_identitfy_code">&#xe653;</string>
+    <!--离家-->
+    <string name="iconfont_leavehome">&#xe612;</string>
+    <!--会客-->
+    <string name="iconfont_meet">&#xe61f;</string>
+    <!--前进箭头-->
+    <string name="iconfont_forword">&#xe606;</string>
+    <!--加号-->
+    <string name="iconfont_plus">&#xe636;</string>
+    <!--设备-->
+    <string name="iconfont_device">&#xe608;</string>
+    <!--场景-->
+    <string name="iconfont_scene">&#xe60a;</string>
+    <!--描述-->
+    <string name="iconfont_detail">&#xe6ed;</string>
+    <!--上拉箭头-->
+    <string name="iconfont_up">&#xe644;</string>
+    <!--下拉箭头-->
+    <string name="iconfont_down">&#xe641;</string>
+    <!--删除-->
+    <string name="iconfont_delete">&#xe628;</string>
+    <!--编辑-->
+    <string name="iconfont_editor">&#xe609;</string>
+</resources>

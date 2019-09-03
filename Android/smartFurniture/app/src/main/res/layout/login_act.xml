@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewCtrl"
+            type="com.zucc.smartfurniture.module.user.viewCtrl.LoginCtrl"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:fitsSystemWindows="true"
+            android:minHeight="?attr/actionBarSize">
+
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_h3"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_h1" />
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y135"
+            android:background="@color/colorPrimary"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_home" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/edit_left_right"
+                android:layout_marginTop="@dimen/y30"
+                android:background="@drawable/layout_underline">
+
+                <com.zucc.smartfurniture.views.iconfont.IconFontsText
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:gravity="center_vertical"
+                    android:text="@string/iconfont_username"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/iconfont_size" />
+
+                <com.zucc.smartfurniture.views.ClearEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:background="@null"
+                    android:hint="@string/username_hint"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:paddingLeft="@dimen/x10"
+                    android:text="@={viewCtrl.vm.username}"
+                    android:textSize="@dimen/text_size_h1"
+                    app:delete_image="@drawable/icon_clear" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/edit_left_right"
+                android:layout_marginTop="@dimen/y10"
+                android:background="@drawable/layout_underline">
+
+                <com.zucc.smartfurniture.views.iconfont.IconFontsText
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:gravity="center_vertical"
+                    android:text="@string/iconfont_password"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/iconfont_size" />
+
+                <com.zucc.smartfurniture.views.ClearEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:background="@null"
+                    android:hint="@string/password_hint"
+                    android:inputType="textPassword"
+                    android:maxLength="12"
+                    android:paddingLeft="@dimen/x10"
+                    android:text="@={viewCtrl.vm.password}"
+                    android:textSize="@dimen/text_size_h1"
+                    app:delete_image="@drawable/icon_clear" />
+            </LinearLayout>
+
+            <com.zucc.smartfurniture.views.NoDoubleClickButton
+                android:id="@+id/button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x40"
+                android:layout_marginRight="@dimen/x40"
+                android:layout_marginTop="@dimen/y20"
+                android:background="@drawable/selector_button"
+                android:onClick="@{(view)->viewCtrl.Login()}"
+                android:text="@string/login"
+                android:textColor="@color/white" />
+
+            <com.zucc.smartfurniture.views.NoDoubleClickButton
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x40"
+                android:layout_marginRight="@dimen/x40"
+                android:layout_marginTop="@dimen/y10"
+                android:background="@drawable/selector_button_light"
+                android:text="@string/register"
+                android:onClick="@{(view)->viewCtrl.register()}"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y10"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:onClick="@{(view)->viewCtrl.forgetPassword()}"
+                android:text="@string/forget_password"
+                android:textSize="@dimen/text_size_h3" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

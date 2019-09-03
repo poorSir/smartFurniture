@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ClearEditText">
+        <attr name="delete_color" format="color"></attr>
+        <attr name="delete_image" format="reference"></attr>
+    </declare-styleable>
+</resources>
